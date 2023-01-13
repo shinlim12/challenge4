@@ -1,0 +1,30 @@
+
+in player controller, on collission enter method, switch away from player var, from self - other, change to other - self
+
+in spawn manager script, under update method, change find game objects with tag from powerup to enemy
+in spawn manager script, in spawn enemy wave method, in for loop conditional, change 2 to enemies to spawn
+
+in player controller script, under on trigger enter method, add StartCoroutine(PowerupCooldown());
+
+in enemy script, under start method, add find player goal and assign it to playerGoal variable
+
+In player controller script, create variable for turbo boost set it to 10, and a public turboSmoke
+
+In player controller script, under update method, create a conditional for pressing enter
+Under the coditional made, add force to the direction of focal point forward multipled by turbo boost
+also play smoke particles 
+add comments above it
+
+in Unity, in Hierarchy, drag the smoke particle object to under player under focal point
+also set its position to 0 -1 0
+
+in Unity, click player, drag the smoke particle under focal point to the turbo smoke (found in the inspector of player under player controller script)
+
+in spawn manager script, create variable for enemy speed set it to 50
+in spawn manager script, under spawn enemy wave method, increment enemy speed by 25
+
+in enemy script, create a variable for spawn manager x script
+in enemy script, under start, set the spawn manager x script variable by finding the spawn manager object and getting its component
+also set speed to enemy speed from spawn manager script
+
+
